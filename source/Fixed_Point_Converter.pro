@@ -23,13 +23,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    flineedit.cpp \
         main.cpp \
         mainwindow.cpp \
-    fixed_point_calculations.cpp
+    fixed_point_calculations.cpp \
+    number_repr.cpp
 
 HEADERS += \
+    flineedit.h \
         mainwindow.h \
-    fixed_point_calculations.h
+    fixed_point_calculations.h \
+    number_repr.h
 
 FORMS += \
         mainwindow.ui
@@ -40,3 +44,5 @@ RC_ICONS = fxc_icon_128.ico
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES +=
